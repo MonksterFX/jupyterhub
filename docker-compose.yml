@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  jupyterhub:
+    build: jupyterhub
+    image: jupyterhub_img
+    container_name: jupyterhub
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # - jupyterhub_data:/srv/jupyterhub
+    ports:
+      - 8000:8000
+    environment:
+      - OAUTH2_AUTHORIZE_URL=http://localhost:9080/auth/realms/jupyterhub/protocol/openid-connect/auth
+      - OAUTH2_TOKEN_URL=http://localhost:9080/auth/realms/jupyterhub/protocol/openid-connect/token
+      - OAUTH_CALLBACK_URL=https://localhost:8000/hub/oauth_callback
+      - DOCKER_JUPYTER_CONTAINER=jupyterlab_img
+      - DOCKER_NETWORK_NAME=${COMPOSE_PROJECT_NAME}_default
+      - HUB_IP=jupyterhub
+    restart: on-failure
+
+  jupyterlab:
+    build: jupyterlab
+    image: jupyterlab_img
+    container_name: jupyterlab-throaway
+    network_mode: none
+    command: echo
