@@ -1,4 +1,4 @@
-# jupyterhub
+# jupyterhub on single maschine with docker
 Single Docker Instanz + Jupyterhub + Jupyter Lab + Doc
 
 Motivation behind this is a simple minimal running setup for small classes teaching python in jupyterhub. This includes:
