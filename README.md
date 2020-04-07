@@ -11,7 +11,7 @@ Motivation behind this is a simple minimal running setup for small classes teach
 * [Getting an overview](https://jupyterhub.readthedocs.io/en/stable/)
 
 ## jupterhub
-ToDo: Jupyterhub image and how to modify, local PAM users only
+ToDo: Jupyterhub image and how to modify, local PAM users only (if you do not have an oauth service), how to modify frontpage (Logo etc.), sso
 
 ## notebooks
 ToDo: Own Image Creation, List of provided images
