@@ -11,9 +11,11 @@ services:
     ports:
       - 8000:8000
     environment:
-      - OAUTH2_AUTHORIZE_URL=http://localhost:9080/auth/realms/jupyterhub/protocol/openid-connect/auth
-      - OAUTH2_TOKEN_URL=http://localhost:9080/auth/realms/jupyterhub/protocol/openid-connect/token
-      - OAUTH_CALLBACK_URL=https://localhost:8000/hub/oauth_callback
+      # - OAUTH2_AUTHORIZE_URL=http://localhost:9080/auth/realms/jupyterhub/protocol/openid-connect/auth
+      # - OAUTH2_TOKEN_URL=http://localhost:9080/auth/realms/jupyterhub/protocol/openid-connect/token
+      # - OAUTH_CALLBACK_URL=https://localhost:8000/hub/oauth_callback
+      - OAUTH_CLIENT_ID=jupyterhub
+      - OAUTH_CLIENT_SECRET=f68220b6-6728-4722-86f7-9c2bdd222977
       - DOCKER_JUPYTER_CONTAINER=jupyterlab_img
       - DOCKER_NETWORK_NAME=${COMPOSE_PROJECT_NAME}_default
       - HUB_IP=jupyterhub
