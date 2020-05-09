@@ -161,6 +161,7 @@ c.DockerSpawner.environment = {'CHOWN_HOME':'yes', 'CHOWN_HOME_OPTS':'-R', 'GRAN
 ## create volume to store at
 notebook_dir = os.environ.get('DOCKER_NOTEBOOK_DIR') or '/home/jovyan/work'
 c.DockerSpawner.volumes = { 'jupyterhub-user-{username}': notebook_dir }
+c.DockerSpawner.extra_host_config = {"cpus":0.5}
 
 ## remove containers once they are stopped
 c.DockerSpawner.remove_containers = True

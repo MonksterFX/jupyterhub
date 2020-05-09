@@ -14,6 +14,9 @@ Motivation behind this is a simple minimal running setup for small classes teach
 ToDo: Jupyterhub image and how to modify, local PAM users only (if you do not have an oauth service), how to modify frontpage (Logo etc.), sso
 
 ## notebooks
+
+
+
 ToDo: Own Image Creation, List of provided images
 
 ## usefull advices
