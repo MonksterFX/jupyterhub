@@ -8,6 +8,7 @@ RUN conda install --quiet --yes \
 RUN conda install --quiet --yes -c conda-forge \
 	nodejs \
 	faker \
+	ipywidgets \
 	&& jupyter labextension install @jupyter-widgets/jupyterlab-manager \
 	&& conda clean --all -f -y
 
